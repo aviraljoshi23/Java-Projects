@@ -1,0 +1,120 @@
+#include<stdio.h>
+#include<string.h>
+#include<stdlib.h>
+struct student
+{
+    int Roll_no;
+    char name[20];
+    char father_name[50];
+    char mather_name[50];
+    int dd,mm,yy;
+    int hindi;
+    int english;
+    int physics;
+    int chemistry;
+    int maths;
+    int ph_pha;
+    int ch_pra
+}s,check,upd,r,dell;
+
+int
+date (int y, int m, int d)
+{
+  if (y < 9999 && y > 1800)
+    {
+      if (m > 0 && m <= 12)
+	{
+	  if (d < 32 && d >= 1)
+	    {
+	      if (m == 2)
+		{
+		  if (y % 4 == 0)
+		    {
+		      if (d <= 29)
+			{
+			  return 1;
+			}
+		      else
+			{
+			  return 0;;
+			}
+
+		    }
+		  else
+		    {
+		      if (d <= 28)
+			{
+			  return 1;
+			}
+		      else
+			{
+			  return 0;
+			}
+		    }
+		}
+	      else if (m == 4 || m == 6 || m == 9 || m == 11)
+		{
+		  if (d <= 30)
+		    {
+		      return 1;
+		    }
+		  else
+		    {
+		      return 0;
+		    }
+
+		}
+	      else if (m != 4 && m != 6 && m != 9 && m != 11)
+		{
+		  return 1;
+		}
+	    }
+	  else
+	    {
+	      return 0;
+	    }
+	}
+      else
+	{
+	  return 0;
+	}
+    }
+  else
+    {
+      return 0;
+    }
+}
+
+create()
+{
+    int i,k,x=0,y=0;
+    FILE *ptr;
+    ptr=fopen("marksheet.txt","a+");
+    if(ptr==NULL)
+    {
+        printf("File type invalid");
+        exit(0);
+    }
+    printf("\n\n\n\n\t\t\t\t");
+    enter:
+    printf("\n \t\t\t Roll no cannot be grater then 1030 or less then 1000 \n\n");
+    printf("Enter your roll no:");
+    scanf("%d",&r.Roll_no);g
+    if(r.Roll_no==s.Roll_no)
+    {}
+    else
+    {
+        printf("\t\t\t Roll no  cannot be greater 1030 or less then 1000 \n\n");
+        goto enter;
+    }
+    while(fscanf(ptr,"%d %s %s %s %d %d %d %d %d %d %d %d %d %d"
+    ,s.Roll_no,s.father_name,s.mother_name,&s.dd,&s.mm,&s.yy,&s.hindi,
+    &s.english,&s.physics,&s.chemistry,&s.maths,&s.ph_pra,s.ch_pra)!=EOF)
+    if(s.Roll_no==r.Roll_no)
+    {
+        printf("\n \t\t\t\t this roll no already exist\n");
+    }
+    }
+    
+    }
+}
